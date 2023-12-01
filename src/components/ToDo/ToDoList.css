@@ -16,3 +16,8 @@
 .done{
     text-decoration: line-through;
 }
+
+.active{
+    background: dodgerblue;
+    color: #fff;
+}
