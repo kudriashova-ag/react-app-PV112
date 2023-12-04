@@ -20,7 +20,7 @@ const UserInfo = () => {
 
   useEffect(() => {
     getUser();
-  }, []);
+  }, [id]);
 
   return (
     <div>

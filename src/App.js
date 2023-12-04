@@ -14,8 +14,9 @@ function App() {
         <Route path="/" element={<ToDoList />} />
         <Route path="/counter" element={<Counter />} />
 
-        <Route path="/users" element={<UserList />} />
-        <Route path="/user/:id" element={<UserInfo />} />
+        <Route path="/users" element={<UserList />}>
+          <Route path=":id" element={<UserInfo />} />
+        </Route>
 
         <Route path="/about-us" element={<h1>About Us</h1>} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
