@@ -5,10 +5,12 @@ import ToDoList from './components/ToDo/ToDoList';
 import Header from './components/Header/Header';
 import UserList from './components/Users/UserList';
 import UserInfo from './components/Users/UserInfo';
+import ThemeProvider from './providers/ThemeProvider';
 
 function App() {
+  
   return (
-    <>
+    <ThemeProvider>
       <Header />
       <Routes>
         <Route path="/" element={<ToDoList />} />
@@ -21,7 +23,7 @@ function App() {
         <Route path="/about-us" element={<h1>About Us</h1>} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
-    </>
+    </ThemeProvider>
   );
 }
 
