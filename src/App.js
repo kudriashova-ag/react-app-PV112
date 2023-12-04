@@ -1,11 +1,22 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Counter from './components/Counter/Counter';
 import ToDoList from './components/ToDo/ToDoList';
+import Header from './components/Header/Header';
+import UserList from './components/Users/UserList';
 
 function App() {
   return (
     <>
-      <ToDoList />
+      <Header />
+      <Routes>
+        <Route path="/" element={<ToDoList />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/users" element={<UserList />} />
+        <Route path="/about-us" element={<h1>About Us</h1>} />
+
+        <Route path="*" element={<h1>Page Not Found</h1>} />
+      </Routes>
     </>
   );
 }

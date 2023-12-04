@@ -15,7 +15,6 @@ const ToDoList = () => {
   }, [toDoItems]);
 
 
-
   const addTask = (todoItem) => {
     const newItems = [...toDoItems, todoItem];
     setToDoItems(newItems);
