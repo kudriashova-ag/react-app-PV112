@@ -6,9 +6,10 @@ import Header from './components/Header/Header';
 import UserList from './components/Users/UserList';
 import UserInfo from './components/Users/UserInfo';
 import ThemeProvider from './providers/ThemeProvider';
+import Mail from './components/Contacts/Mail';
 
 function App() {
-  
+
   return (
     <ThemeProvider>
       <Header />
@@ -20,7 +21,7 @@ function App() {
           <Route path=":id" element={<UserInfo />} />
         </Route>
 
-        <Route path="/about-us" element={<h1>About Us</h1>} />
+        <Route path="/about-us" element={<Mail />} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
     </ThemeProvider>
