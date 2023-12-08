@@ -1,6 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 const Counter = () => {
+  let count = useRef(0);
+  
+  const incrementCount = () => { 
+    count.current++;
+    console.log(count.current);
+    console.log(divElem);
+    divElem.current.style.color = 'red'
+  }
+
+  const divElem = useRef(null);
+
   let [i, setI] = useState(0);
 
   const increment = () => {
@@ -12,7 +23,9 @@ const Counter = () => {
   };
 
   return (
-    <div>
+    <div ref={divElem}>
+      <button onClick={incrementCount}>incrementCount</button>
+
       <button onClick={decrement}>-</button>
       {i}
       <button onClick={increment}>+</button>
